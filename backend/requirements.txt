@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+websockets
+spotipy
+yt-dlp
+python-dotenv

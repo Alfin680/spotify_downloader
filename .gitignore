@@ -1,0 +1,27 @@
+
+# --- SYSTEM ---
+.DS_Store
+Thumbs.db
+
+# --- PYTHON BACKEND ---
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+
+# --- SECURITY (NEVER UPLOAD THESE) ---
+backend/.env
+frontend/.env
+
+# --- DOWNLOADS & TEMP FILES ---
+backend/public_downloads/
+backend/temp_*/
+backend/downloads/
+
+# --- HEAVY BINARIES (Don't upload these, they are huge) ---
+backend/*.exe
+backend/*.zip
+
+# --- NODE FRONTEND ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/

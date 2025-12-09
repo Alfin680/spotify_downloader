@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* THE MATRIX BACKGROUND */
+body {
+  background-color: #050505;
+  color: #00ff41;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+}
+
+/* CRT SCANLINE EFFECT */
+body::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%, 
+      rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+      90deg, 
+      rgba(255, 0, 0, 0.06), 
+      rgba(0, 255, 0, 0.02), 
+      rgba(0, 0, 255, 0.06)
+  );
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* GLOWING TEXT UTILITIES */
+.text-neon {
+  text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+}
+
+.border-neon {
+  box-shadow: 0 0 5px #00ff41, inset 0 0 5px #00ff41;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000; 
+}
+::-webkit-scrollbar-thumb {
+  background: #003b00; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff41; 
+}
+
+/* GLITCH ANIMATION KEYFRAMES */
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+
+.glitch-hover:hover {
+  animation: glitch 0.2s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
