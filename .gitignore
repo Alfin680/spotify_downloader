@@ -11,7 +11,7 @@ backend/*.pyc
 # --- SECURITY (NEVER UPLOAD THESE) ---
 backend/.env
 frontend/.env
-backend/.cache/
+backend/.cache
 
 # --- DOWNLOADS & TEMP FILES ---
 backend/public_downloads/
